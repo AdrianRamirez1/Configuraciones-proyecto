@@ -1,0 +1,47 @@
+# =============================================
+# CONFIGURACIÓN SSH - Empresa LexLegal        #
+# =============================================
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+# ==================== PUERTO ====================
+Port 2222
+
+# ==================== ESCUCHA ====================
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+# ==================== SEGURIDAD ====================
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+PermitEmptyPasswords no
+
+# Limitar intentos de ataque
+MaxAuthTries 3
+LoginGraceTime 30s
+
+# Cerrar conexiones inactivas
+ClientAliveInterval 300
+ClientAliveCountMax 2
+
+# Logging (importante para auditoría legal)
+LogLevel VERBOSE
+
+# ==================== RESTRICCIONES ====================
+# Solo permitir usuarios específicos (MODIFICA ESTO)
+AllowUsers soporte abogado1 abogado2 abogado3 abogado4 abogado5 abogado6
+
+# ==================================================
+X11Forwarding no
+AllowTcpForwarding no
+GatewayPorts no
+
+# ==================== AUTENTICACIÓN ====================
+UsePAM yes
+KbdInteractiveAuthentication no
+
+# =============================================
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server

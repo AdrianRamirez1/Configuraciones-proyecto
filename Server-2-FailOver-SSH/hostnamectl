@@ -1,0 +1,12 @@
+ Static hostname: Server-2
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: 6c55d3058db145c09be7d90c8f654ad1
+         Boot ID: 635b31e23692477ab3883a3637327dcd
+  Virtualization: oracle
+Operating System: Debian GNU/Linux 12 (bookworm)
+          Kernel: Linux 6.1.0-39-amd64
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+Firmware Version: VirtualBox

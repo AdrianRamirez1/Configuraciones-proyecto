@@ -1,0 +1,30 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+## INTERNET
+allow-hotplug enp0s3
+iface enp0s3 inet dhcp
+
+## LAN 0.0
+allow-hotplug enp0s8
+iface enp0s8 inet static
+	address 10.0.0.1
+	netmask 255.255.255.0
+
+## LAN 10.0
+allow-hotplug enp0s9
+iface enp0s9 inet static
+	address 10.0.10.1
+	netmask 255.255.255.0
+
+up      ip route add 10.0.20.0/24 via 10.0.10.2 dev enp0s9
+down    ip route del 10.0.20.0/24 via 10.0.10.2 dev enp0s9
+
+up      ip route add 10.0.30.0/24 via 10.0.10.3 dev enp0s9
+down    ip route del 10.0.30.0/24 via 10.0.10.3 dev enp0s9
