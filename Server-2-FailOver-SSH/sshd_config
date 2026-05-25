@@ -29,7 +29,7 @@ ClientAliveCountMax 2
 LogLevel VERBOSE
 
 # ==================== RESTRICCIONES ====================
-# Solo permitir usuarios específicos (MODIFICA ESTO)
+# Solo permitir usuarios específicos
 AllowUsers soporte abogado1 abogado2 abogado3 abogado4 abogado5 abogado6
 
 # ==================================================
