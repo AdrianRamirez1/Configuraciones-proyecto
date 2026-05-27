@@ -128,12 +128,12 @@ echo ""
 # Reinicios de servicios
 echo "Reiniciando servicios..."
 sudo systemctl restart networking.service
-sudo systemctl restart isc-dhcp-server
+sudo systemctl restart isc-dhcp-server.service
 
 echo ""
 echo "✅ Reinicios ejecutados:"
 echo "   • systemctl restart networking.service"
-echo "   • systemctl restart isc-dhcp-server"
+echo "   • systemctl restart isc-dhcp-server.service"
 echo ""
 
 echo "¡Script finalizado!"
