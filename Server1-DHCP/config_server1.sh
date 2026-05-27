@@ -136,10 +136,4 @@ echo "   • systemctl restart networking.service"
 echo "   • systemctl restart isc-dhcp-server"
 echo ""
 
-echo "Verifica el estado con:"
-echo "   ip addr show"
-echo "   systemctl status isc-dhcp-server"
-echo "   sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf   # (para comprobar sintaxis)"
-
-echo ""
 echo "¡Script finalizado!"
