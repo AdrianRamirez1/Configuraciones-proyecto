@@ -170,20 +170,13 @@ echo ""
 echo "Reiniciando servicios..."
 sudo systemctl restart networking.service
 sudo systemctl restart isc-dhcp-server
-sudo systemctl restart ssh
+sudo systemctl restart ssh.service
 
 echo ""
 echo "✅ Reinicios ejecutados:"
 echo "   • systemctl restart networking.service"
 echo "   • systemctl restart isc-dhcp-server"
-echo "   • systemctl restart ssh"
+echo "   • systemctl restart ssh.service"
 echo ""
 
-echo "Verifica el estado con:"
-echo "   ip addr show"
-echo "   systemctl status isc-dhcp-server"
-echo "   systemctl status ssh"
-echo "   sudo sshd -t                    # Comprobar sintaxis SSH"
-
-echo ""
 echo "¡Script finalizado!"
